@@ -22,8 +22,11 @@ class Init {
 		// Register blocks.
 		add_action( 'init', array( $this, 'register_blocks' ) );
 
-		// Register scripts.
-		add_action( 'init', array( $this, 'register_scripts' ) );
+		// Enqueue admin scripts
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
+
+		// Enqueue block editor scripts
+		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_assets' ) );
 
 		// Uninstallation process.
 		register_uninstall_hook( FSEB_NAMESPACE, __NAMESPACE__ . '\Init::plugin_uninstall' );
@@ -48,7 +51,7 @@ class Init {
 	}
 
 	/**
-	 * Register blocks
+	 * Register dynamic blocks
 	 */
 	public function register_blocks() {
 		$blocks = array(
@@ -61,10 +64,13 @@ class Init {
 	}
 
 	/**
-	 * Register scripts
+	 * Enqueue admin scripts
 	 */
-	public function register_scripts() {
-		// Register admin page scripts.
+	public function admin_enqueue_scripts( $hook_suffix ) {
+		if ( 'settings_page_' . FSEB_NAMESPACE !== $hook_suffix ) {
+			return;
+		}
+
 		if ( is_admin() ) {
 			wp_enqueue_style(
 				FSEB_NAMESPACE . '-admin',
@@ -91,6 +97,30 @@ class Init {
 				)
 			);
 		}
+
+		// Load translated strings.
+		wp_set_script_translations( FSEB_NAMESPACE . '-admin', FSEB_NAMESPACE );
+	}
+
+	/**
+	 * Enqueue block editor scripts
+	 */
+	public function enqueue_block_editor_assets() {
+		wp_enqueue_script(
+			FSEB_NAMESPACE,
+			FSEB_URL . '/build/blocks.js',
+			array(),
+			filemtime( FSEB_PATH . '/build/blocks.js' ),
+		);
+
+		wp_localize_script(
+			FSEB_NAMESPACE,
+			'fsebObj',
+			array(
+				'version' => FSEB_VERSION,
+				'options' => Settings::get_options(),
+			)
+		);
 
 		// Load translated strings.
 		wp_set_script_translations( FSEB_NAMESPACE, FSEB_NAMESPACE );
