@@ -1,0 +1,19 @@
+{
+	"apiVersion": 2,
+	"name": "fse-blocks/post-new-label",
+	"title": "New Post Label",
+	"category": "theme",
+	"keywords": [ "new", "post"],
+	"description": "Display a label for new posts.",
+	"textdomain": "fse-blocks",
+	"attributes": {
+		"content": {
+			"type": "string",
+			"source": "html",
+			"selector": "p"
+		}
+	},
+	"editorScript": "file:../../../build/post-new-label.js",
+	"editorStyle": "file:../../../build/post-new-label.css",
+	"style": "file:../../../build/style-post-new-label.css"
+}

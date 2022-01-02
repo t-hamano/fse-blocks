@@ -1,0 +1,131 @@
+// React notification component
+@import "../../node_modules/react-notifications-component/dist/scss/notification";
+
+// WordPress admin
+.auto-fold #wpcontent {
+	padding-left: 0;
+}
+
+#fse-blocks-admin {
+
+	// Common classes
+	h2 {
+		margin-top: 0;
+		margin-bottom: 16px;
+	}
+
+	.fseb-wrap--is-waiting {
+		opacity: 0.2;
+	}
+
+	.fseb-container {
+		position: relative;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 16px;
+	}
+
+	// React notification component
+	.notifications-component {
+		margin-left: -80px;
+
+		.notification__message {
+			font-size: 16px;
+		}
+	}
+
+	// Disabled component
+	.components-disabled {
+		opacity: 0.3;
+	}
+
+	// Header component
+	.fseb-header {
+		padding: 16px 0 8px;
+		background-color: #fff;
+
+		&__ttl {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 0 8px;
+			line-height: 1;
+
+			@media screen and (max-width: 782px) {
+				font-size: 20px;
+			}
+		}
+
+		&__version {
+			position: absolute;
+			top: 0;
+			right: 16px;
+			margin: 0;
+
+			@media screen and (max-width: 782px) {
+				position: static;
+				margin-top: 16px;
+				text-align: center;
+			}
+		}
+	}
+
+	// Loading component
+	.fseb-loading {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		margin-left: 89px;
+
+		.components-spinner {
+			margin: 0;
+			transform: scale(1.5);
+		}
+	}
+
+	// TabPanel component
+	.fseb-tabs .components-tab-panel__tabs {
+		justify-content: center;
+		margin-bottom: 40px;
+		background: #fff;
+		box-shadow: 0 1px 0 rgba(213, 213, 213, 0.5);
+	}
+
+	// Tab content component
+	.fseb-tab-content {
+		min-height: 50vh;
+	}
+
+	// Controls component
+	.fseb-controls {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 40px;
+
+		&__item {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// Modal component
+.fseb-modal {
+
+	.components-modal__content {
+
+		@media screen and (max-width: 782px) {
+			height: auto;
+		}
+	}
+
+	&__controls {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 32px;
+
+		.components-button + .components-button {
+			margin-left: 32px;
+		}
+	}
+}
