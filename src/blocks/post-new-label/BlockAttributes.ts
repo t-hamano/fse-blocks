@@ -1,4 +1,9 @@
 // Block attributes
 export interface BlockAttributes {
-	content?: string;
+	contentJustification: 'left' | 'center' | 'right';
+	day: number;
+	label: string;
+	textAlign: 'left' | 'center' | 'right';
+	width: number;
+	widthUnit: 'px' | '%' | 'em';
 }

@@ -1,3 +1,6 @@
-.wp-block-fseb-post-new-label {
-	background: blue;
+.wp-block-fse-blocks-post-new-label {
+
+	&:not(.is-new-post) {
+		opacity: 0.3;
+	}
 }

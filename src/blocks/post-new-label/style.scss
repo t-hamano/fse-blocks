@@ -1,3 +1,19 @@
-.wp-block-fseb-post-new-label {
-	background: red;
+.wp-block-fse-blocks-post-new-label {
+	display: flex;
+
+	&.is-content-justification-left {
+		justify-content: flex-start;
+	}
+
+	&.is-content-justification-center {
+		justify-content: center;
+	}
+
+	&.is-content-justification-right {
+		justify-content: flex-end;
+	}
+
+	&__inner {
+		min-width: 50px !important;
+	}
 }
