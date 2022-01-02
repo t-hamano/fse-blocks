@@ -64,7 +64,7 @@ interface Props extends BlockEditProps< BlockAttributes > {
 
 // export default function PostNewLabelEdit( props: any ) {
 export default function PostNewLabelEdit( props: Props ) {
-	const { attributes, setAttributes, context, className } = props;
+	const { attributes, setAttributes, context } = props;
 	const { contentJustification, day, label, textAlign, width, widthUnit } = attributes;
 	const { postType, postId, queryId } = context;
 
@@ -195,7 +195,6 @@ export default function PostNewLabelEdit( props: Props ) {
 					<RichText
 						tagName="div"
 						className={ classnames(
-							className,
 							'wp-block-fse-blocks-post-new-label__inner',
 							colorProps.className,
 							borderProps.className
@@ -215,7 +214,6 @@ export default function PostNewLabelEdit( props: Props ) {
 				) : (
 					<div
 						className={ classnames(
-							className,
 							'wp-block-fse-blocks-post-new-label__inner',
 							colorProps.className,
 							borderProps.className
@@ -224,6 +222,7 @@ export default function PostNewLabelEdit( props: Props ) {
 							...borderProps.style,
 							...colorProps.style,
 							...spacingProps.style,
+							width: `${ width }${ widthUnit }`,
 						} }
 					>
 						{ label }
