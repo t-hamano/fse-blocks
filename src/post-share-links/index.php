@@ -16,7 +16,7 @@ function fse_blocks_post_share_links_render_block( $attributes, $content, $block
 }
 
 register_block_type(
-	FSEB_PATH . '/build/post-share-links',
+	FSE_BLOCKS_PATH . '/build/post-share-links',
 	array(
 		'render_callback' => 'fse_blocks_post_share_links_render_block',
 	)

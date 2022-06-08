@@ -16,7 +16,7 @@ function fse_blocks_post_reading_time_render_block( $attributes, $content, $bloc
 }
 
 register_block_type(
-	FSEB_PATH . '/build/post-reading-time',
+	FSE_BLOCKS_PATH . '/build/post-reading-time',
 	array(
 		'render_callback' => 'fse_blocks_post_reading_time_render_block',
 	)

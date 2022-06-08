@@ -189,7 +189,7 @@ function fse_blocks_post_new_label_classnames_inner( $attributes ) {
 }
 
 register_block_type(
-	FSEB_PATH . '/build/post-new-label',
+	FSE_BLOCKS_PATH . '/build/post-new-label',
 	array(
 		'render_callback' => 'fse_blocks_post_new_label_render_block',
 	)

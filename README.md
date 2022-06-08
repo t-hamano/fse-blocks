@@ -3,7 +3,11 @@
 
 WordPress plugin that provide useful blocks for full site editor.
 
-## Post Archive Link
+## Display Condition Block
+
+Display blocks under certain conditions.
+
+## Post Archive Link Block
 
 Show post archive link.
 
@@ -15,7 +19,7 @@ Show post meta.
 
 Show a label for new posts.
 
-## Post Permalink
+## Post Permalink Block
 
 Group multiple blocks of posts as a single link.
 

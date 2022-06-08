@@ -16,7 +16,7 @@ function fse_blocks_post_meta_render_block( $attributes, $content, $block ) {
 }
 
 register_block_type(
-	FSEB_PATH . '/build/post-meta',
+	FSE_BLOCKS_PATH . '/build/post-meta',
 	array(
 		'render_callback' => 'fse_blocks_post_meta_render_block',
 	)

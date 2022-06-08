@@ -18,11 +18,20 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'FSEB_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
+define( 'FSE_BLOCKS_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 
 // Register blocks.
 function fse_blocks_enqueue_editor_scripts() {
-	$blocks = array(
+	// Register static blocks.
+	$static_blocks = array(
+		'display-condition',
+	);
+	foreach ( $static_blocks as $name ) {
+		register_block_type( FSE_BLOCKS_PATH . "/build/{$name}" );
+	}
+
+	// Register dynamic blocks.
+	$dynamic_blocks = array(
 		'post-archive-link',
 		'post-meta',
 		'post-new-label',
@@ -30,8 +39,9 @@ function fse_blocks_enqueue_editor_scripts() {
 		'post-reading-time',
 		'post-share-links',
 	);
-	foreach ( $blocks as $name ) {
-		require_once FSEB_PATH . "/build/{$name}/index.php";
+
+	foreach ( $dynamic_blocks as $name ) {
+		require_once FSE_BLOCKS_PATH . "/build/{$name}/index.php";
 	}
 }
 add_action( 'init', 'fse_blocks_enqueue_editor_scripts' );
