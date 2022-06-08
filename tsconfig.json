@@ -1,35 +1,11 @@
 {
 	"compilerOptions": {
-		"allowJs": true,
-		"checkJs": false,
-		"allowSyntheticDefaultImports": true,
-		"jsx": "preserve",
-		"target": "esnext",
-		"module": "esnext",
-		"lib": [ "dom", "esnext" ],
-		"declaration": true,
-		"declarationMap": true,
-		"composite": true,
-		"emitDeclarationOnly": true,
-		"isolatedModules": true,
-		"baseUrl": ".",
 		"strict": true,
+		"jsx": "preserve",
+		"lib": [ "dom", "esnext" ],
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
-		"noImplicitReturns": true,
-		"noFallthroughCasesInSwitch": true,
-		"importsNotUsedAsValues": "error",
-		"moduleResolution": "node",
 		"esModuleInterop": true,
 		"resolveJsonModule": true,
-
-		"typeRoots": [ "./node_modules/@types" ],
 	},
-	"include": [
-		"src/**/*",
-		"src/**/*.json"
-	],
-	"exclude": [
-		"**/build/**",
-	]
 }

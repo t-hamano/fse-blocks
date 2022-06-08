@@ -11,6 +11,7 @@
 .eslintrc.js
 .gitignore
 .prettierrc.js
+.stylelintignore
 .stylelintrc.js
 .wp-env.json
 composer.json
@@ -21,4 +22,3 @@ package.json
 phpcs.ruleset.xml
 README.md
 tsconfig.json
-webpack.config.js

@@ -1,51 +1,32 @@
 {
 	"name": "fse-blocks",
-	"author": "Tetsuaki Hamano",
+	"author": "Aki Hamano",
 	"license": "GPL-2.0+",
 	"scripts": {
 		"wp-env": "wp-env",
 		"open": "wp-env start && opener http://localhost:8888",
 		"stop": "wp-env stop",
-		"start": "wp-scripts start src/admin src/blocks src/blocks/post-new-label src/blocks/test --output-path build",
-		"build": "wp-scripts build src/admin src/blocks src/blocks/post-new-label src/blocks/test --output-path build",
+		"start": "wp-scripts start --webpack-copy-php",
+		"build": "wp-scripts build --webpack-copy-php",
 		"format": "wp-scripts format ./src",
 		"lint": "npm run lint:css && npm run lint:js",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
-		"lint:php": "composer lint",
-		"test": "npm run lint:js && npm run test:e2e && npm run test:unit",
-		"test:e2e": "wp-scripts test-e2e --config test/e2e/jest.config.js",
-		"test:unit": "wp-scripts test-unit-js --config test/unit/jest.config.js"
+		"lint:php": "composer lint"
 	},
 	"devDependencies": {
-		"@types/jest": "^27.4.0",
-		"@types/puppeteer": "^5.4.4",
-		"@types/react-notifications-component": "^3.1.1",
-		"@types/wordpress__block-editor": "^6.0.4",
-		"@types/wordpress__blocks": "^9.1.1",
+		"@types/wordpress__block-editor": "^7.0.0",
 		"@types/wordpress__compose": "^4.0.1",
-		"@types/wordpress__core-data": "^2.4.5",
-		"@types/wordpress__data": "^4.6.10",
-		"@types/wordpress__date": "^3.3.2",
-		"@types/wordpress__dom-ready": "^2.9.0",
-		"@typescript-eslint/eslint-plugin": "^5.8.1",
-		"@typescript-eslint/parser": "^5.8.1",
-		"@wordpress/e2e-test-utils": "^5.4.10",
-		"@wordpress/env": "^4.1.3",
-		"@wordpress/jest-preset-default": "^7.1.3",
-		"@wordpress/jest-puppeteer-axe": "^3.1.1",
-		"@wordpress/scripts": "^19.2.2",
-		"install": "^0.13.0",
-		"npm": "^8.3.0",
+		"@types/wordpress__i18n": "^3.11.0",
+		"@wordpress/env": "^4.8.0",
+		"@wordpress/scripts": "^23.2.0",
 		"opener": "^1.5.2",
-		"prettier": "npm:wp-prettier@2.2.1-beta-1",
+		"prettier": "npm:wp-prettier@2.6.2",
 		"puppeteer-testing-library": "^0.6.0",
-		"stylelint-config-rational-order": "^0.1.2",
-		"typescript": "^4.5.4"
+		"stylelint-config-recess-order": "^3.0.0",
+		"typescript": "^4.7.3"
 	},
 	"dependencies": {
-		"@wordpress/icons": "^6.1.1",
-		"jest": "^27.4.5",
-		"react-notifications-component": "^3.1.0"
+		"@wordpress/icons": "^9.1.0"
 	}
 }

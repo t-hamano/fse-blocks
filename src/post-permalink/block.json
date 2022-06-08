@@ -1,0 +1,13 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "fse-blocks/post-permalink",
+	"title": "Post Permalink",
+	"category": "theme",
+	"keywords": [ "fse", "post", "link"],
+	"description": "Group multiple blocks of posts as a single link.",
+	"textdomain": "fse-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style.css"
+}

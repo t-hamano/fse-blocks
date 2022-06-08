@@ -1,0 +1,13 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "fse-blocks/post-share-links",
+	"title": "Post Share Links",
+	"category": "theme",
+	"keywords": [ "fse", "post", "social", "share"],
+	"description": "Show social media share links.",
+	"textdomain": "fse-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style.css"
+}

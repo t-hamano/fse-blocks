@@ -4,12 +4,12 @@
 	"license": "GPL-2.0-or-later",
 	"authors": [
 		{
-			"name": "Tetsuaki Hamano"
+			"name": "Aki Hamano"
 		}
 	],
 	"require-dev": {
 		"squizlabs/php_codesniffer": "*",
-    "wp-coding-standards/wpcs": "*"
+		"wp-coding-standards/wpcs": "*"
 	},
 	"scripts": {
 		"phpcs": "phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs",
