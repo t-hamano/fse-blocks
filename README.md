@@ -1,5 +1,5 @@
 #  FSE Blocks
-**⚠ : This plugin is under development.**
+**⚠ This plugin is under development.**
 
 WordPress plugin that provide useful blocks for full site editor.
 
